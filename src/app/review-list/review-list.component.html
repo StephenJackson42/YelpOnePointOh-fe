@@ -1,0 +1,17 @@
+<h2>
+    Reviews
+    <div routerLink="create" class="btn btn-primary pull-right">Create Review</div>
+</h2>
+
+<p>Select a review from the list below.</p>
+
+<review-card *ngFor="let review of reviews"
+    [review]="review"
+    (reviewDeleted)="handleReviewDeleted($event)">review.businessName
+</review-card>
+
+<div *ngIf="error" class="alert alert-danger">
+  <span class="glyphicon glyphicon-exclamation-sign"></span>
+  {{error}}
+</div>
+
