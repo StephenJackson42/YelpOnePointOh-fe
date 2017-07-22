@@ -1,0 +1,25 @@
+{
+    "name": "YelpOnePointOh",
+    "version": "0.0.0",
+    "license": "MIT",
+
+    "dependencies":{
+        "@angular/common": "^4.0.0",
+        "@angular/compiler":  "^4.0.0",
+        "@angular/core":  "^4.0.0",
+        "@angular/platform-browser":  "^4.0.0",
+        "@angular/platform-browser-dynamic":  "^4.0.0",
+        "@angular/router":  "^4.0.0",
+        "zone.js": "^0.8.4",
+        "@angular/http": "^4.0.0",
+        "@angular/forms": "^4.0.0",
+        "bootstrap": "3.3.7"
+	},
+
+	"devDependencies": {
+        "@angular/cli": "1.0.0",
+        "@angular/compiler-cli": "^4.0.0",
+        "ts-node": "~2.0.0",
+        "typescript": "~2.2.0"
+    }
+}

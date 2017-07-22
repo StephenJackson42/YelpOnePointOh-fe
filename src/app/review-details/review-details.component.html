@@ -1,0 +1,32 @@
+<h1>Review Details</h1>
+
+<div class="review panel">
+    <div>
+        <h2>
+            {{review.title}}
+            <div routerLink="update" class="btn btn-primary pull-right">Update Review</div>
+        </h2>
+
+
+        <p>{{review.body}}</p>
+        <p><em>{{review.author}}</em></p>
+    </div>
+    <!-- <table class="table table-bordered table-condensed">
+        <thead>
+            <tr class="info">
+                <th>Last Updated</th>
+                <th>Created On</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{review.lastUpdated | date:'medium'}}</td>
+                <td>{{review.createdOn | date}}</td>
+            </tr>
+        </tbody>
+    </table> -->
+</div>
+<div *ngIf="error" class="alert alert-danger">
+  <span class="glyphicon glyphicon-exclamation-sign"></span>
+  {{error}}
+</div> 

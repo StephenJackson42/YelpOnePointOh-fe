@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <header></header>
+        <router-outlet></router-outlet>
+    </div>
+    <div class="row">
+    </div>
+    	<div *ngFor="let review of reviews" class="panel panel-default">
+    	<div class="panel-heading">{{review.businessName}}</div>
+    	<div class="panel-body">{{review.body}}</div>
+	</div>
+
+</div>
