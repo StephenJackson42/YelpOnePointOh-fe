@@ -1,0 +1,16 @@
+<h2>
+    Businesses
+    <div routerLink="create" class="btn btn-primary pull-right">Create Business</div>
+</h2>
+
+<p>Select a business from the list below.</p>
+
+<business-card *ngFor="let business of businesses"
+    [business]="business"
+    (businessDeleted)="handleBusinessDeleted($event)">business.businessName
+</business-card>
+
+<div *ngIf="error" class="alert alert-danger">
+  <span class="glyphicon glyphicon-exclamation-sign"></span>
+  {{error}}
+</div>

@@ -1,7 +1,8 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <a [routerLink]="review.reviewId">{{review.businessName}}</a>
+        <div class="glyphicon glyphicon-remove pull-right" (click)="deleteReview()"></div>
     </div>
-    <div class="glyphicon glyphicon-remove pull-right" (click)="deleteReview()"></div>
+    
     <div class="panel-body">{{review.body}}</div>
 </div>

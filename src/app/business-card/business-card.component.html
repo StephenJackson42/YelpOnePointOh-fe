@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a [routerLink]="business.businessId">{{business.businessName}}</a>
+        <div class="glyphicon glyphicon-remove pull-right" (click)="deleteBusiness()"></div>
+    </div>
+    
+    <div class="panel-body">{{business.description}}</div>
+</div>
+
