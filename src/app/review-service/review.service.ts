@@ -28,7 +28,7 @@ export class ReviewService{
 
     private handleError(error: any): Promise<string> {
         console.log(error);
-        return Promise.reject("Unable to retrieve review data.");
+        return Promise.reject("Unable to retrieve review.");
     }
 
     updateReview(reviewId: number, review: Review): Promise<Review> {

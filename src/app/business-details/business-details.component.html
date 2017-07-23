@@ -1,0 +1,37 @@
+<h1>Business Details</h1>
+
+<div class="business panel" *ngIf="business">
+    <div>
+        <h2>
+            {{business.businessName}}
+            <div routerLink="update" class="btn btn-primary pull-right">Update Business</div>
+        </h2>
+        <p>description: {{business.description}}</p>
+        <p>address: <em>{{business.address}}</em></p>
+        <p>hours: {{business.hours}}</p>
+        <p>website: {{business.website}}</p>
+    </div>
+</div>
+<table>
+            <tr>
+                <td>
+        
+        <iframe width="600" height="450" frameborder="0" style="border:0" 
+        [src]="url" allowfullscreen ></iframe>  
+
+                </td>
+                <td width="600">
+                <div class="review panel">Reviews go here</div>
+                    
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
+<div *ngIf="error" class="alert alert-danger">
+  <span class="glyphicon glyphicon-exclamation-sign"></span>
+  {{error}}
+</div> 

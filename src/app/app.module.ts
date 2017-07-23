@@ -10,6 +10,18 @@ import { HttpModule } from '@angular/http';
 import { ReviewCardComponent } from './review-card/review-card.component';
 import { FormsModule } from '@angular/forms';
 import { ReviewFormComponent } from './review-form/review-form.component';
+
+import { BusinessFormComponent } from './business-form/business-form.component';
+import { BusinessListComponent } from './business-list/business-list.component';
+import { BusinessDetailsComponent } from './business-details/business-details.component';
+import { BusinessService } from './business-service/business.service';
+import { BusinessCardComponent } from './business-card/business-card.component';
+
+
+
+
+
+
 /*import { ReviewSortPipe } from './review-service/review-sort.pipe';
 */
 @NgModule({
@@ -20,6 +32,10 @@ import { ReviewFormComponent } from './review-form/review-form.component';
     	ReviewDetailsComponent,
     	ReviewCardComponent,
     	ReviewFormComponent,
+        BusinessListComponent,
+        BusinessDetailsComponent,
+        BusinessCardComponent,
+        BusinessFormComponent,
     	/*ReviewSortPipe*/
     ],
     imports: [
@@ -47,13 +63,33 @@ import { ReviewFormComponent } from './review-form/review-form.component';
     	{
                 path:'reviews/:reviewId/update',
                 component: ReviewFormComponent
+        },
+
+        {
+            path: 'businesses',
+            component: BusinessListComponent,
+            
+        },
+        {
+                path:'businesses/create',
+                component: BusinessFormComponent
+        },
+
+        {
+            path: 'businesses/:businessId',
+            component: BusinessDetailsComponent,
+
+        },
+        {
+                path:'businesses/:businessId/update',
+                component: BusinessFormComponent
         }]),
     	HttpModule,
     	FormsModule
     	
 
     ],
-    providers: [ReviewService],
+    providers: [ReviewService,BusinessService],
     bootstrap: [AppComponent]
     
 })
