@@ -4,4 +4,5 @@ export class Review{
 	score: string;
 	author: string;
 	businessName: string;
+	link: string;
 }

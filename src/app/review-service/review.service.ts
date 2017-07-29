@@ -26,6 +26,12 @@ export class ReviewService{
             .catch(this.handleError);
     }
 
+    getReviewsByParams(businessName: string): Promise<Review[]> {
+        return this.http.get(this.url + `/?businessName=${businessName}`)
+            .toPromise().then(response => response.json() as Review[])
+            .catch(this.handleError);
+    }
+
     private handleError(error: any): Promise<string> {
         console.log(error);
         return Promise.reject("Unable to retrieve review.");
