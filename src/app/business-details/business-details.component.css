@@ -4,8 +4,13 @@
 }
 
 .review.panel{
-	    padding-left: 250px;
+	    padding-left: 5px;
 	    padding-bottom: 400px;
+}
+
+.map{
+	padding-bottom: 500px;
+	padding-top: 1px;
 }
 
 

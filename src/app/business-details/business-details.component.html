@@ -13,19 +13,25 @@
     </div>
 </div>
 <table>
-            <tr>
-                <td>
-        
-        <iframe width="600" height="450" frameborder="0" style="border:0" 
-        [src]="url" allowfullscreen ></iframe>  
-
-                </td>
-                <td width="600">
-                <div class="review panel">Reviews go here</div>
-                    
-                </td>
-            </tr>
-        </table>
+    <tr>
+        <td>
+            <div class="map">
+                <iframe width="600" height="450" frameborder="0" style="border:0" 
+                [src]="url" allowfullscreen ></iframe>  
+            </div>
+        </td>
+        <td width="600">
+            <div class="review panel" onload="">
+                <review-card *ngFor="let review of reviews"
+                    [review]="review"
+                    (reviewDeleted)="handleReviewDeleted($event)">review.businessName
+                </review-card>
+            </div>
+            
+                   
+        </td>
+    </tr>
+</table>
 
 
 

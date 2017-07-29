@@ -5,12 +5,20 @@
         <input type="text" class="form-control" id="businessName" name="businessName" required [(ngModel)]="review.businessName">
     </div>
     <div class="form-group">
+        <label for="description">Description</label>
         <textarea class="form-control" rows=2 name ="body" [(ngModel)]="review.body"></textarea>
     </div>
     <div class="form-group">
         <label for="author">Author</label>
         <input type="text" class="form-control" id="author" name ="author"required [(ngModel)]="review.author">
     </div>
+    <div class="form-group">
+        <label for="link">Embeded Youtube Video code</label>
+        <textarea class="form-control" rows=2 name ="link" [(ngModel)]="review.link"></textarea>
+    </div>
+
+
+
     <button type="submit" class="btn btn-primary" (click)="submitReview()" >Submit</button>
 
 </form>
